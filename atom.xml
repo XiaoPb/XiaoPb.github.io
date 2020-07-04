@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XiaoPb</title>
+  
+  <subtitle>嵌入式软件</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://xiaopb.xyz/"/>
+  <updated>2020-07-04T06:25:46.960Z</updated>
+  <id>http://xiaopb.xyz/</id>
+  
+  <author>
+    <name>XiaoPb</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JetsonNano 开箱设置</title>
+    <link href="http://xiaopb.xyz/2019/10/30/jetsonnano/jetsonnano-1/"/>
+    <id>http://xiaopb.xyz/2019/10/30/jetsonnano/jetsonnano-1/</id>
+    <published>2019-10-30T04:30:03.000Z</published>
+    <updated>2020-07-04T06:25:46.960Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JetsonNano-开箱设置&quot;&gt;&lt;a href=&quot;#JetsonNano-开箱设置&quot; class=&quot;headerlink&quot; title=&quot;JetsonNano 开箱设置&quot;&gt;&lt;/a&gt;JetsonNano 开箱设置&lt;/h1&gt;&lt;h2 id=&quot;一-刷机&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="JetsonNano" scheme="http://xiaopb.xyz/categories/JetsonNano/"/>
+    
+    
+      <category term="JetsonNano" scheme="http://xiaopb.xyz/tags/JetsonNano/"/>
+    
+      <category term="linux" scheme="http://xiaopb.xyz/tags/linux/"/>
+    
+      <category term="开机设置" scheme="http://xiaopb.xyz/tags/%E5%BC%80%E6%9C%BA%E8%AE%BE%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>测试自动部署</title>
+    <link href="http://xiaopb.xyz/2019/10/30/jetsonnano/jetsonnano-2/"/>
+    <id>http://xiaopb.xyz/2019/10/30/jetsonnano/jetsonnano-2/</id>
+    <published>2019-10-30T04:30:03.000Z</published>
+    <updated>2020-07-04T06:29:15.985Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一-刷机&quot;&gt;&lt;a href=&quot;#一-刷机&quot; class=&quot;headerlink&quot; title=&quot;一. 刷机&quot;&gt;&lt;/a&gt;一. 刷机&lt;/h2&gt;&lt;p&gt;​    参考官网教程和网上教程。&lt;/p&gt;
+&lt;h2 id=&quot;二-换源&quot;&gt;&lt;a href=&quot;#二-换源&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="JetsonNano" scheme="http://xiaopb.xyz/categories/JetsonNano/"/>
+    
+    
+      <category term="JetsonNano" scheme="http://xiaopb.xyz/tags/JetsonNano/"/>
+    
+      <category term="linux" scheme="http://xiaopb.xyz/tags/linux/"/>
+    
+      <category term="自动部署" scheme="http://xiaopb.xyz/tags/%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MD语法规则</title>
+    <link href="http://xiaopb.xyz/2019/08/27/markdown/mdgrammarrules/"/>
+    <id>http://xiaopb.xyz/2019/08/27/markdown/mdgrammarrules/</id>
+    <published>2019-08-27T03:41:03.000Z</published>
+    <updated>2020-07-04T06:23:53.744Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MD语法规则&quot;&gt;&lt;a href=&quot;#MD语法规则&quot; class=&quot;headerlink&quot; title=&quot;MD语法规则&quot;&gt;&lt;/a&gt;MD语法规则&lt;/h1&gt;&lt;p align=&quot;right&quot;&gt;&lt;font
+        
+      
+    
+    </summary>
+    
+      <category term="MarkDown" scheme="http://xiaopb.xyz/categories/MarkDown/"/>
+    
+    
+      <category term="markdown" scheme="http://xiaopb.xyz/tags/markdown/"/>
+    
+      <category term="语法" scheme="http://xiaopb.xyz/tags/%E8%AF%AD%E6%B3%95/"/>
+    
+  </entry>
+  
+</feed>

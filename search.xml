@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>JetsonNano 开箱设置</title>
+      <link href="/2019/10/30/jetsonnano/jetsonnano-1/"/>
+      <url>/2019/10/30/jetsonnano/jetsonnano-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="JetsonNano-开箱设置"><a href="#JetsonNano-开箱设置" class="headerlink" title="JetsonNano 开箱设置"></a>JetsonNano 开箱设置</h1><h2 id="一-刷机"><a href="#一-刷机" class="headerlink" title="一. 刷机"></a>一. 刷机</h2><p>​    参考官网教程和网上教程。</p><h2 id="二-换源"><a href="#二-换源" class="headerlink" title="二. 换源"></a>二. 换源</h2><ol><li><p>备份<code>sources.list</code>文件，<code>sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak</code>。</p></li><li><p>打开<code>sources.list</code>文件，<code>sudo vim /etc/apt/sources.list</code>。</p></li><li><p>复制下面的内容到<code>sources.list</code>，并保存退出（<code>Esc</code> -&gt; <code>:wq</code> -&gt; <code>Enter</code>）。</p><pre class="line-numbers language-powershell"><code class="language-powershell"> deb http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic main multiverse restricted universe deb http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic<span class="token operator">-</span>security main multiverse restricted universe deb http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic<span class="token operator">-</span>updates main multiverse restricted universe deb http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic<span class="token operator">-</span>backports main multiverse restricted universe deb<span class="token operator">-</span>src http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic main multiverse restricted universe deb<span class="token operator">-</span>src http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic<span class="token operator">-</span>security main multiverse restricted universe deb<span class="token operator">-</span>src http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic<span class="token operator">-</span>updates main multiverse restricted universe deb<span class="token operator">-</span>src http:<span class="token operator">/</span><span class="token operator">/</span>mirrors<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>ubuntu<span class="token operator">-</span>ports<span class="token operator">/</span> bionic<span class="token operator">-</span>backports main multiverse restricted universe<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li><p>更新apt，<code>sudo apt-get update</code>。</p></li><li><p>推荐进行系统全面更新一次，<code>sudo apt full-upgrade</code>。</p></li><li><p>安装<code>pip3</code>，<code>sudo apt-get install python3-pip</code>.</p></li><li><p>给pip3换源，<code>mkdir ~/.pip</code>-&gt;<code>vim ~/.pip/pip.conf</code>,</p><pre class="line-numbers language-powershell"><code class="language-powershell"><span class="token namespace">[global]</span>timeout = 6000index<span class="token operator">-</span>url = https:<span class="token operator">/</span><span class="token operator">/</span>pypi<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span class="token operator">/</span>simple<span class="token operator">/</span>trusted<span class="token operator">-</span>host = pypi<span class="token punctuation">.</span>tuna<span class="token punctuation">.</span>tsinghua<span class="token punctuation">.</span>edu<span class="token punctuation">.</span>cn<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>( pip和pip3的操作方法相同 )</p></li></ol><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> JetsonNano </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JetsonNano </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> 开机设置 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>测试自动部署</title>
+      <link href="/2019/10/30/jetsonnano/jetsonnano-2/"/>
+      <url>/2019/10/30/jetsonnano/jetsonnano-2/</url>
+      
+        <content type="html"><![CDATA[<h2 id="一-刷机"><a href="#一-刷机" class="headerlink" title="一. 刷机"></a>一. 刷机</h2><p>​    参考官网教程和网上教程。</p><h2 id="二-换源"><a href="#二-换源" class="headerlink" title="二. 换源"></a>二. 换源</h2><p>   ( pip和pip3的操作方法相同 )</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> JetsonNano </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> JetsonNano </tag>
+            
+            <tag> linux </tag>
+            
+            <tag> 自动部署 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MD语法规则</title>
+      <link href="/2019/08/27/markdown/mdgrammarrules/"/>
+      <url>/2019/08/27/markdown/mdgrammarrules/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MD语法规则"><a href="#MD语法规则" class="headerlink" title="MD语法规则"></a>MD语法规则</h1><p align="right"><font color="gray">作者：XiaoPb</font></p><h2 id="一-标题"><a href="#一-标题" class="headerlink" title="一. 标题"></a>一. 标题</h2><pre class="line-numbers language-c"><code class="language-c">前面带#号，后面带文字，分别表示h1<span class="token operator">-</span>h6<span class="token punctuation">,</span>只到h6，而且h1下面会有一条横线# 一级标题 ### 二级标题 ##### 三级标题 ###<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><table>    <tbody><tr>        <td align="center"><a href="https://github.com/XiaoPb/blogs/tree/master/mdGrammarRules" target="_blank" rel="noopener"><img src="./images/loading.gif" data-original="doc/1.png"><br><sub><b>标题示例</b></sub></a>    </td></tr></tbody></table><h2 id="二-列表"><a href="#二-列表" class="headerlink" title="二. 列表"></a>二. 列表</h2><h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><pre><code>//形式一+ a+ b+ c//形式二- a- b- c//形式三* a* b* c</code></pre><h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><pre><code>1. abc2. abc3. abc</code></pre><table>    <tbody><tr>        <td align="center"><a href="https://github.com/XiaoPb/blogs/tree/master/mdGrammarRules" target="_blank" rel="noopener"><img src="./images/loading.gif" data-original="doc/2.png"><br><sub><b>无序列表</b></sub></a>        </td><td align="center"><a href="https://github.com/XiaoPb/blogs/tree/master/mdGrammarRules" target="_blank" rel="noopener"><img src="./images/loading.gif" data-original="doc/3.png"><br><sub><b>有序列表</b></sub></a>    </td></tr></tbody></table><h3 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h3><pre><code>+ 1+ 2  + 1  + 21. a2. b  1. c  2. d</code></pre><table>    <tbody><tr>        <td align="center"><a href="https://github.com/XiaoPb/blogs/tree/master/mdGrammarRules" target="_blank" rel="noopener"><img src="./images/loading.gif" data-original="doc/4.png"><br><sub><b>列表嵌套</b></sub></a>    </td></tr></tbody></table><h2 id="三-图片"><a href="#三-图片" class="headerlink" title="三. 图片"></a>三. 图片</h2><h3 id="md语法"><a href="#md语法" class="headerlink" title="md语法"></a>md语法</h3><ol><li><p><code>![图片描述](图片链接)</code></p><p>例子：<code>![GitHub](https://github.com/XiaoPb/blogs/blob/master/mdGrammarRules/doc/github.jpg?raw=true)</code></p></li></ol><p align="left"><font color="red">结果如下：</font></p><p>   <img src="./images/loading.gif" data-original="https://github.com/XiaoPb/blogs/blob/master/mdGrammarRules/doc/github.jpg?raw=true" alt="GitHub"></p><ol start="2"><li><p>html方式</p><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>table</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>tr</span><span class="token punctuation">></span></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>td</span> <span class="token attr-name">align</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>center<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token comment" spellcheck="true">&lt;!-- 图片居中 --></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://github.com/XiaoPb/blogs/tree/master/mdGrammarRules<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>       <span class="token comment" spellcheck="true">&lt;!-- 图片Git项目地址 --></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>doc/github.jpg<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>       <span class="token comment" spellcheck="true">&lt;!-- 图片在项目的具体地址 --></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>sub</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>GitHub<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>sub</span><span class="token punctuation">></span></span>       <span class="token comment" spellcheck="true">&lt;!-- 图片标识 --></span>       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>tr</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>table</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p align="left"><font color="red">结果如下：</font></p><table>    <tbody><tr>       <td align="center">       <a href="https://github.com/XiaoPb/blogs/tree/master/mdGrammarRules" target="_blank" rel="noopener">       <img src="./images/loading.gif" data-original="doc/github.jpg">       <br><sub><b>GitHub</b></sub>       </a>    </td></tr></tbody></table></li></ol><h2 id="四-列表"><a href="#四-列表" class="headerlink" title="四. 列表"></a>四. 列表</h2><pre><code>|节次|星期一|星期二|星期三|星期四|星期五|星期六|星期日||:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:||第1、2节|智能仪器(1-8)|电子测量与仪器A(1-12)||电子测量与仪器A(1-12)|智能仪器(1-8)|电子工程训练2(3-5)|电子工程训练2(3-5)||第3、4节|||非电量检测技术(4-12)||非电量检测技术(4-11)|电子工程训练2(3-5)|电子工程训练2(3-5)||第5、6节|信号与系统分析B(3-16)|专业英语(测控)(1-8)|信号与系统分析B(3-16)|专业英语(测控)(1-8)|电子工程训练2(3-6)|电子工程训练2(3-5)|电子工程训练2(3-5)|</code></pre><p align="left"><font color="red">结果如下：</font></p><p align="center"><font size="72px;">2019-2020-2 课程表</font></p><table><thead><tr><th align="center">节次</th><th align="center">星期一</th><th align="center">星期二</th><th align="center">星期三</th><th align="center">星期四</th><th align="center">星期五</th><th align="center">星期六</th><th align="center">星期日</th></tr></thead><tbody><tr><td align="center">第1、2节</td><td align="center">智能仪器(1-8)</td><td align="center">电子测量与仪器A(1-12)</td><td align="center"></td><td align="center">电子测量与仪器A(1-12)</td><td align="center">智能仪器(1-8)</td><td align="center">电子工程训练2(3-5)</td><td align="center">电子工程训练2(3-5)</td></tr><tr><td align="center">第3、4节</td><td align="center"></td><td align="center"></td><td align="center">非电量检测技术(4-12)</td><td align="center"></td><td align="center">非电量检测技术(4-11)</td><td align="center">电子工程训练2(3-5)</td><td align="center">电子工程训练2(3-5)</td></tr><tr><td align="center">第5、6节</td><td align="center">信号与系统分析B(3-16)</td><td align="center">专业英语(测控)(1-8)</td><td align="center">信号与系统分析B(3-16)</td><td align="center">专业英语(测控)(1-8)</td><td align="center">电子工程训练2(3-6)</td><td align="center">电子工程训练2(3-5)</td><td align="center">电子工程训练2(3-5)</td></tr></tbody></table><p align="left"><font color="red">简单示例：</font></p><pre><code>|Head|Head|Head||:-- |:--:| --:|        // 设置列居中或者右对齐或者左对齐|Left|Center|Right||Left|Center|Right|</code></pre><p align="left"><font color="red">结果如下：</font></p><table><thead><tr><th align="left">Head</th><th align="center">Head</th><th align="right">Head</th></tr></thead><tbody><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr><tr><td align="left">Left</td><td align="center">Center</td><td align="right">Right</td></tr></tbody></table><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> MarkDown </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> 语法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
